@@ -12,7 +12,7 @@ import java.util.List;
 @Dao
 public interface TechnologyDao {
     @Insert
-    void insertTechnology(Technology technology);
+    long insertTechnology(Technology technology);
 
     @Update
     void updateTechnology(Technology technology);

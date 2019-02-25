@@ -10,11 +10,14 @@ import android.util.Log;
 
 import com.example.multipletabledboperation.service.model.Company;
 import com.example.multipletabledboperation.service.model.Developer;
+import com.example.multipletabledboperation.service.model.Products;
+import com.example.multipletabledboperation.service.model.Projects;
+import com.example.multipletabledboperation.service.model.Technology;
 import com.example.multipletabledboperation.viewModel.localRepository.DatabaseOperations;
 
 import java.util.List;
 
-public class ViewModelDeveloper extends AndroidViewModel implements DatabaseOperations.SendDeveloperData {
+public class ViewModelDeveloper extends AndroidViewModel implements DatabaseOperations.SendTechnology_DeveloperData {
 
     private MutableLiveData<List<Developer>> listMutableLiveData;
 
@@ -23,17 +26,18 @@ public class ViewModelDeveloper extends AndroidViewModel implements DatabaseOper
         this.listMutableLiveData = new MutableLiveData<>();
     }
 
-    public LiveData<List<Developer>> getCompanyData(){
+    public LiveData<List<Developer>> getListOfDevelopersData(int techId){
+        new DatabaseOperations(getApplication()).getAllDeveloperForTechnology(this,techId);
         return listMutableLiveData;
     }
 
-    public void insertDeveloper(Context context, String s){
-        new DatabaseOperations(context).addDeveloper(this,s);
+    @Override
+    public void setLiveDataTechnology(List<Technology> liveData) {
+
     }
 
     @Override
-    public void setLiveData(List<Developer> liveData) {
+    public void setLiveDataDeveloper(List<Developer> liveData) {
         listMutableLiveData.postValue(liveData);
-        Log.d("list", "LiveData: "+liveData);
     }
 }

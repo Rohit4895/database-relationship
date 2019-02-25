@@ -15,7 +15,7 @@ import java.util.List;
 public interface TechnologyDeveloperJoinDao {
 
     @Insert
-    void insertTD(Technology_Developer technology_developer);
+    long insertTD(Technology_Developer technology_developer);
 
     @Query("select * from Technology INNER JOIN Technology_Developer " +
             "ON Technology.techId = Technology_Developer.technologyId " +
@@ -27,4 +27,7 @@ public interface TechnologyDeveloperJoinDao {
             "where Technology_Developer.technologyId=:techId")
     @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH)
     List<Developer> getDevForTech(final int techId);
+
+    @Query("select devId from Developer where devName=:developerName")
+    int getDeveloperId(String developerName);
 }

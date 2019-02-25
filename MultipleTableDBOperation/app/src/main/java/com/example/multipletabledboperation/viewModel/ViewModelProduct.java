@@ -14,8 +14,7 @@ import com.example.multipletabledboperation.viewModel.localRepository.DatabaseOp
 
 import java.util.List;
 
-public class ViewModelProduct extends AndroidViewModel implements DatabaseOperations.SendProductData,
-        DatabaseOperations.InsertOperation, DatabaseOperations.SendCompany_ProductData {
+public class ViewModelProduct extends AndroidViewModel implements DatabaseOperations.SendCompany_ProductData {
 
     private MutableLiveData<List<Products>> listMutableLiveData;
     private int compId;
@@ -35,24 +34,10 @@ public class ViewModelProduct extends AndroidViewModel implements DatabaseOperat
 
     @Override
     public void setLiveDataProducts(List<Products> liveData) {
-        Log.d("prodId", "PRODUCT: "+liveData);
+        Log.d("prodId", "Product setLiveDataProducts: "+liveData);
         listMutableLiveData.postValue(liveData);
     }
 
-    @Override
-    public void setLiveData(List<Products> liveData) {
-        Log.d("prodId", "PRODUCT: "+liveData);
-    }
-
-    @Override
-    public void insertComplete(long id) {
-
-    }
-
-    @Override
-    public void insertComplete1(long id) {
-
-    }
 
     @Override
     public void setLiveDataCompany(List<Company> liveData) {

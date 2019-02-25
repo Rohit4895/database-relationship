@@ -15,19 +15,16 @@ import com.example.multipletabledboperation.viewModel.localRepository.DatabaseOp
 
 import java.util.List;
 
-public class ViewModelAddProduct extends AndroidViewModel implements DatabaseOperations.SendCompany_ProductData,
-        DatabaseOperations.InsertOperation, DatabaseOperations.SendProdId {
+public class ViewModelAddProduct extends AndroidViewModel implements DatabaseOperations.InsertOperation, DatabaseOperations.SendId {
 
     private MutableLiveData<Boolean> booleanMutableLiveData;
     private MutableLiveData<Boolean> booleanMutableLiveData1;
-    private MutableLiveData<List<Products>> listMutableLiveData;
     private MutableLiveData<Integer> intMutableLiveData;
 
     public ViewModelAddProduct(@NonNull Application application) {
         super(application);
         booleanMutableLiveData = new MutableLiveData<>();
         booleanMutableLiveData1 = new MutableLiveData<>();
-        listMutableLiveData = new MutableLiveData<>();
         intMutableLiveData = new MutableLiveData<>();
     }
 
@@ -36,25 +33,20 @@ public class ViewModelAddProduct extends AndroidViewModel implements DatabaseOpe
         return booleanMutableLiveData;
     }
 
-
-    public LiveData<List<Products>> getListOfProductData(int compId){
-        new DatabaseOperations(getApplication()).getAllProductForCompany(this, compId);
-        return listMutableLiveData;
+    public LiveData<Integer> getProductId(String prodName){
+        new DatabaseOperations(getApplication()).getProductId(this,prodName);
+        return intMutableLiveData;
     }
-
 
     public MutableLiveData<Boolean> insertCompany_Product(int compId, int prodId){
         new DatabaseOperations(getApplication()).addCompany_Product(this,compId,prodId);
         return booleanMutableLiveData1;
     }
 
-    public LiveData<Integer> getProductId(String prodName){
-        new DatabaseOperations(getApplication()).getProductId(this,prodName);
-        return intMutableLiveData;
-    }
 
     @Override
     public void insertComplete(long id) {
+        Log.d("prodId", "Add Product insertComplete: "+id);
         if(id == 0){
             return;
         }
@@ -62,19 +54,8 @@ public class ViewModelAddProduct extends AndroidViewModel implements DatabaseOpe
     }
 
     @Override
-    public void setLiveDataProducts(List<Products> liveData) {
-        Log.d("prodId", "prodIdList: "+liveData);
-        listMutableLiveData.postValue(liveData);
-    }
-
-    @Override
-    public void setLiveDataCompany(List<Company> liveData) {
-
-    }
-
-
-    @Override
     public void insertComplete1(long id) {
+        Log.d("prodId", "Add Product insertComplete 1: "+id);
         if (id == 0){
             return;
         }
@@ -82,11 +63,11 @@ public class ViewModelAddProduct extends AndroidViewModel implements DatabaseOpe
     }
 
     @Override
-    public void prodId(int id) {
+    public void getId(int id) {
+        Log.d("prodId", "Add Product prodId: "+id);
         if (id == 0){
             return;
         }
         intMutableLiveData.postValue(id);
-
     }
 }

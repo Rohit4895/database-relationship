@@ -34,8 +34,8 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         final Company company = list.get(position);
 
-        viewHolder.idTitle.setText("ID: "+company.getCompId());
-        viewHolder.nameTitle.setText("Name: "+company.getCompName());
+        viewHolder.idTitle.setText("Company ID: "+company.getCompId());
+        viewHolder.nameTitle.setText("Company Name: "+company.getCompName());
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

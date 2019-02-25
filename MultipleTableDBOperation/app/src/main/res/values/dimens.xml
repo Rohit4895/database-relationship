@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Company XML-->
+    <dimen name="compEditTextMTp">164dp</dimen>
+    <dimen name="compSaveButtonMTp">64dp</dimen>
+
+    <!--Developer-->
+    <dimen name="technologyIdTextSize">20dp</dimen>
+    <dimen name="devEditTextMTp">36dp</dimen>
+    <dimen name="devEditTextAddMTp">20dp</dimen>
+    <dimen name="devEditTextMobMTp">20dp</dimen>
+    <dimen name="devSaveButtonMTp">20dp</dimen>
+
+    <!--Product-->
+    <dimen name="compForProdTextSize">20dp</dimen>
+    <dimen name="compForProdMBtm">64dp</dimen>
+    <dimen name="prodEditTextMTp">164dp</dimen>
+    <dimen name="prodSaveButtonMTp">64dp</dimen>
+
+    <!--Project-->
+    <dimen name="productIdTextSize">20dp</dimen>
+    <dimen name="productIdMBtm">64dp</dimen>
+    <dimen name="projEditTextMTp">164dp</dimen>
+    <dimen name="projSaveButtonMTp">64dp</dimen>
+
+    <!--Technology-->
+    <dimen name="projectIdTextSize">20dp</dimen>
+    <dimen name="projectIdMBtm">64dp</dimen>
+    <dimen name="techEditTextMTp">164dp</dimen>
+    <dimen name="techSaveButtonMTp">64dp</dimen>
+
+    <!--Developers Item-->
+    <dimen name="devTitleNameTextSize">20dp</dimen>
+    <dimen name="devTitleNameMTp">50dp</dimen>
+    <dimen name="devTitleNameMLt">10dp</dimen>
+    <dimen name="devTitleNameMRt">10dp</dimen>
+    <dimen name="devSubTitleTextSize">20dp</dimen>
+    <dimen name="devSubTitleMLt">10dp</dimen>
+    <dimen name="devSubTitleMRt">10dp</dimen>
+    <dimen name="devAddressTextSize">20dp</dimen>
+    <dimen name="devAddressMLt">10dp</dimen>
+    <dimen name="devAddressMRt">10dp</dimen>
+    <dimen name="devMobileTextSize">20dp</dimen>
+    <dimen name="devMobileMLt">10dp</dimen>
+    <dimen name="devMobileMRt">10dp</dimen>
+    <dimen name="devPartitionLineHeight">1dp</dimen>
+    <dimen name="devPartitionLineMTp">2dp</dimen>
+    <dimen name="devPartitionLineMLt">10dp</dimen>
+    <dimen name="devPartitionLineMRt">10dp</dimen>
+    <dimen name="devPartitionLineMBtm">2dp</dimen>
+
+</resources>

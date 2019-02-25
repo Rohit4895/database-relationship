@@ -9,31 +9,34 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.example.multipletabledboperation.service.model.Company;
+import com.example.multipletabledboperation.service.model.Projects;
 import com.example.multipletabledboperation.service.model.Technology;
 import com.example.multipletabledboperation.viewModel.localRepository.DatabaseOperations;
 
 import java.util.List;
 
-public class ViewModelTechnology extends AndroidViewModel implements DatabaseOperations.SendTechnologyData {
+public class ViewModelTechnology extends AndroidViewModel implements DatabaseOperations.SendProject_TechnologyData {
 
     private MutableLiveData<List<Technology>> listMutableLiveData;
 
     public ViewModelTechnology(@NonNull Application application) {
         super(application);
-        this.listMutableLiveData = new MutableLiveData<>();
+        listMutableLiveData = new MutableLiveData<>();
     }
 
-    public LiveData<List<Technology>> getCompanyData(){
+    public LiveData<List<Technology>> getAllListOfTechnologyData(int projectId){
+        new DatabaseOperations(getApplication()).getAllTechnologyForProjects(this,projectId);
         return listMutableLiveData;
     }
 
-    public void insertTechnology(Context context, String s){
-        new DatabaseOperations(context).addTechnology(this,s);
+
+    @Override
+    public void setLiveDataProjects(List<Projects> liveData) {
+
     }
 
     @Override
-    public void setLiveData(List<Technology> liveData) {
+    public void setLiveDataTechnology(List<Technology> liveData) {
         listMutableLiveData.postValue(liveData);
-        Log.d("list", "LiveData: "+liveData);
     }
 }

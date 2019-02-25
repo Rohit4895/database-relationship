@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.multipletabledboperation.R;
 import com.example.multipletabledboperation.service.model.Products;
@@ -24,7 +25,7 @@ public class ActivityAddProduct extends AppCompatActivity {
     private EditText editText;
     private Button button;
     private ViewModelAddProduct viewModelAddProduct;
-    //private ViewModelCompanyProduct viewModelCompanyProduct;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +36,9 @@ public class ActivityAddProduct extends AppCompatActivity {
         button = findViewById(R.id.prodSaveButton);
 
        viewModelAddProduct = ViewModelProviders.of(this).get(ViewModelAddProduct.class);
-      // viewModelCompanyProduct = ViewModelProviders.of(this).get(ViewModelCompanyProduct.class);
 
         final int compId = getIntent().getIntExtra("companyId",0);
+        Log.d("prodId", "Company Id"+compId);
         textView.setText("Company Id: "+compId);
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +50,13 @@ public class ActivityAddProduct extends AppCompatActivity {
                 booleanLiveData.observe(ActivityAddProduct.this, new Observer<Boolean>() {
 
                     @Override
-                    public void onChanged(@Nullable Boolean aBoolean) {
+                    public void onChanged(@Nullable Boolean success) {
+                        if(!success){
+                            Toast.makeText(ActivityAddProduct.this,
+                                    "Error while insertion",
+                                    Toast.LENGTH_SHORT).show();
+                            return;
+                        }
                        final LiveData<Integer> prodId = viewModelAddProduct.getProductId(prodName);
                        prodId.observe(ActivityAddProduct.this, new Observer<Integer>() {
 
@@ -58,25 +65,24 @@ public class ActivityAddProduct extends AppCompatActivity {
                                Integer i = new Integer(integer);
                                final int id = i.intValue();
                                Log.d("prodId", "prodId: "+id+" compId: "+compId);
+
                               LiveData<Boolean> comProd = viewModelAddProduct.insertCompany_Product(compId,id);
                               comProd.observe(ActivityAddProduct.this, new Observer<Boolean>() {
                                   @Override
-                                  public void onChanged(@Nullable Boolean aBoolean) {
-                                      LiveData<List<Products>> listLiveData = viewModelAddProduct.getListOfProductData(compId);
-                                      listLiveData.observe(ActivityAddProduct.this, new Observer<List<Products>>() {
-                                          @Override
-                                          public void onChanged(@Nullable List<Products> productsList) {
-                                              setResult(Activity.RESULT_OK, null);
-                                              finish();
-                                          }
-                                      });
+                                  public void onChanged(@Nullable Boolean success1) {
+                                      if(!success1){
+                                          Toast.makeText(ActivityAddProduct.this,
+                                                  "Error while insertion",
+                                                  Toast.LENGTH_SHORT).show();
+                                          return;
+                                      }
+                                      setResult(Activity.RESULT_OK, null);
+                                      finish();
                                   }
                               });
                            }
                        });
 
-                        setResult(Activity.RESULT_OK, null);
-                        finish();
                     }
                 });
             }

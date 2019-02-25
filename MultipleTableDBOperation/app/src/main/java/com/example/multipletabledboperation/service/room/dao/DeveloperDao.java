@@ -12,7 +12,7 @@ import java.util.List;
 @Dao
 public interface DeveloperDao {
     @Insert
-    void insertDeveloper(Developer developer);
+    long insertDeveloper(Developer developer);
 
     @Update
     void updateDeveloper(Developer developer);

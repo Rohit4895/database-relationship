@@ -31,7 +31,7 @@ public class ActivityProducts extends AppCompatActivity implements ProductAdapte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_products);
 
-        compId =0;
+        compId = getIntent().getIntExtra("companyId",0);
 
         RecyclerView recyclerView = findViewById(R.id.productRecycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
@@ -59,7 +59,7 @@ public class ActivityProducts extends AppCompatActivity implements ProductAdapte
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent = new Intent(ActivityProducts.this, ActivityAddProduct.class);
-        intent.putExtra("companyId",getIntent().getIntExtra("companyId",0));
+        intent.putExtra("companyId",compId);
         startActivityForResult(intent,1);
         return true;
     }
@@ -77,7 +77,6 @@ public class ActivityProducts extends AppCompatActivity implements ProductAdapte
 
     @Override
     public void goToAddProject(int id) {
-        compId = id;
         Intent intent = new Intent(this, ActivityProjects.class);
         intent.putExtra("productId",id);
         startActivity(intent);

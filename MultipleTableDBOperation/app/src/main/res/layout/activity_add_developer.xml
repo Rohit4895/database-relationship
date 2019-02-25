@@ -6,4 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".view.ui.ActivityAddDeveloper">
 
+    <TextView
+        android:id="@+id/technologyId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Technology Id:"
+        android:textSize="@dimen/technologyIdTextSize"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/devEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/devEditTextMTp"
+        android:hint="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/technologyId" />
+
+    <EditText
+        android:id="@+id/devEditTextAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/devEditTextAddMTp"
+        android:hint="Address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/devEditText" />
+
+    <EditText
+        android:id="@+id/devEditTextMob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/devEditTextMobMTp"
+        android:hint="Mobile"
+        app:layout_constraintTop_toBottomOf="@+id/devEditTextAdd"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/devSaveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/devSaveButtonMTp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/devEditTextMob" />
+
 </android.support.constraint.ConstraintLayout>

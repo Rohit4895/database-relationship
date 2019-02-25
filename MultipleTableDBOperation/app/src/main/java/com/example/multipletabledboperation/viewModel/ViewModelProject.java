@@ -9,12 +9,13 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.example.multipletabledboperation.service.model.Company;
+import com.example.multipletabledboperation.service.model.Products;
 import com.example.multipletabledboperation.service.model.Projects;
 import com.example.multipletabledboperation.viewModel.localRepository.DatabaseOperations;
 
 import java.util.List;
 
-public class ViewModelProject extends AndroidViewModel implements DatabaseOperations.SendProjectData {
+public class ViewModelProject extends AndroidViewModel implements DatabaseOperations.SendProduct_ProjectData {
 
     private MutableLiveData<List<Projects>> listMutableLiveData;
 
@@ -23,17 +24,19 @@ public class ViewModelProject extends AndroidViewModel implements DatabaseOperat
         this.listMutableLiveData = new MutableLiveData<>();
     }
 
-    public LiveData<List<Projects>> getCompanyData(){
+    public LiveData<List<Projects>> getListOfProjectsData(int prodId){
+        new DatabaseOperations(getApplication()).getAllProjectsForProducts(this,prodId);
         return listMutableLiveData;
     }
 
-    public void insertProjects(Context context, String s){
-        new DatabaseOperations(context).addProject(this,s);
+
+    @Override
+    public void setLiveDataProducts(List<Products> liveData) {
+
     }
 
     @Override
-    public void setLiveData(List<Projects> liveData) {
+    public void setLiveDataProjects(List<Projects> liveData) {
         listMutableLiveData.postValue(liveData);
-        Log.d("list", "LiveData: "+liveData);
     }
 }

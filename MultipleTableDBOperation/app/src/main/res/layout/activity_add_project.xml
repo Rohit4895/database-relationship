@@ -6,4 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".view.ui.ActivityAddProject">
 
+    <TextView
+        android:id="@+id/productId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/productIdTextSize"
+        android:text="Product Id:"
+        android:layout_marginBottom="@dimen/productIdMBtm"
+        app:layout_constraintBottom_toTopOf="@+id/projEditText" />
+
+    <EditText
+        android:id="@+id/projEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/projEditTextMTp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/projSaveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_marginTop="@dimen/projSaveButtonMTp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/projEditText" />
+
 </android.support.constraint.ConstraintLayout>

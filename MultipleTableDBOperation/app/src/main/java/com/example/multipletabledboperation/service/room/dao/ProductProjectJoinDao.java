@@ -14,7 +14,7 @@ import java.util.List;
 @Dao
 public interface ProductProjectJoinDao {
     @Insert
-    void insertPP(Product_Project product_project);
+    long insertPP(Product_Project product_project);
 
     @Query("select * from Products INNER JOIN Product_Project " +
             "ON Products.prodId = Product_Project.productId " +
@@ -27,4 +27,7 @@ public interface ProductProjectJoinDao {
             "where Product_Project.productId =:prodId")
     @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH)
     List<Projects> getProjForProd(final int prodId);
+
+    @Query("select proId from Projects where proName=:projectName")
+    int getProjectId(String projectName);
 }

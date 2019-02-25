@@ -6,4 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".view.ui.ActivityAddTechnology">
 
+    <TextView
+        android:id="@+id/projectId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/projectIdTextSize"
+        android:text="Project Id:"
+        android:layout_marginBottom="@dimen/projectIdMBtm"
+        app:layout_constraintBottom_toTopOf="@+id/techEditText" />
+
+    <EditText
+        android:id="@+id/techEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/techEditTextMTp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/techSaveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_marginTop="@dimen/techSaveButtonMTp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/techEditText" />
+
 </android.support.constraint.ConstraintLayout>
