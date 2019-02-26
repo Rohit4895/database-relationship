@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/cardViewMRt"
+    android:layout_marginLeft="@dimen/cardViewMLt"
+    android:layout_marginBottom="@dimen/cardViewMBtm"
+    android:layout_marginTop="@dimen/cardViewMTp">
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <TextView
@@ -8,47 +16,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Id: "
-        android:textSize="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
+        android:textSize="@dimen/idTitleDevTextSize"
+        android:layout_marginTop="@dimen/idTitleDevMTp"
+        android:layout_marginLeft="@dimen/idTitleDevMLt"
+        android:layout_marginRight="@dimen/idTitleDevMRt"/>
     <TextView
         android:id="@+id/nameTitleDev"
         android:layout_below="@+id/idTitleDev"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Name: "
-        android:textSize="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
+        android:textSize="@dimen/nameTitleDevTextSize"
+        android:layout_marginLeft="@dimen/nameTitleDevMLt"
+        android:layout_marginRight="@dimen/nameTitleDevMRt"/>
     <TextView
         android:id="@+id/addTitleDev"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/nameTitleDev"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="@dimen/addTitleDevMLt"
+        android:layout_marginRight="@dimen/addTitleDevMRt"
         android:text="Address:"
-        android:textSize="20dp"/>
+        android:textSize="@dimen/addTitleDevTextSize"/>
     <TextView
         android:id="@+id/mobTitleDev"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/addTitleDev"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="@dimen/mobTitleDevMLt"
+        android:layout_marginRight="@dimen/mobTitleDevMRt"
         android:text="Mobile:"
-        android:textSize="20dp"/>
+        android:textSize="@dimen/mobTitleDevTextSize"/>
     <View
-        android:id="@+id/partitionLine"
-        android:layout_marginTop="1dp"
+        android:id="@+id/partitionLineDev"
+        android:layout_marginTop="@dimen/partitionLineDevMTp"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="@dimen/partitionLineDevHeight"
         android:layout_below="@+id/mobTitleDev"
         android:text=""
         android:background="@color/colorPrimary"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="2dp"/>
+        android:layout_marginLeft="@dimen/partitionLineDevMLt"
+        android:layout_marginRight="@dimen/partitionLineDevMRt"
+        android:layout_marginBottom="@dimen/partitionLineDevMBtm"/>
 
 </RelativeLayout>
+</android.support.v7.widget.CardView>

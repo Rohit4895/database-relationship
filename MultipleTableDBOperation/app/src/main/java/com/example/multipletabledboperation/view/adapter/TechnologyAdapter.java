@@ -34,8 +34,8 @@ public class TechnologyAdapter extends RecyclerView.Adapter<TechnologyAdapter.Vi
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         final Technology technology = technologyList.get(position);
 
-        viewHolder.idTitle.setText("Technology ID: "+technology.getTechId());
-        viewHolder.nameTitle.setText("Technology Name: "+technology.getTechName());
+        viewHolder.idTitle.setText("ID: "+technology.getTechId());
+        viewHolder.nameTitle.setText("Name: "+technology.getTechName());
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

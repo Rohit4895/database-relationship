@@ -5,8 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.ui.ActivityCompany">
+    <TextView
+        android:id="@+id/prodTitle"
+        android:text="Products List:- "
+        android:textSize="@dimen/textViewTextSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/textViewMLt"
+        android:layout_marginRight="@dimen/textViewMRt"
+        android:layout_marginTop="@dimen/textViewMTp"
+        android:layout_marginBottom="@dimen/textViewMBtm"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/productRecycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent"
+        android:layout_below="@id/prodTitle"></android.support.v7.widget.RecyclerView>
 </RelativeLayout>

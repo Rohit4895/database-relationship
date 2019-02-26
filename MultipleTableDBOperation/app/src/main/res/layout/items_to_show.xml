@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/cardViewMRt"
+    android:layout_marginLeft="@dimen/cardViewMLt"
+    android:layout_marginBottom="@dimen/cardViewMBtm"
+    android:layout_marginTop="@dimen/cardViewMTp">
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
         <TextView
@@ -8,29 +16,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Id: "
-            android:textSize="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            android:textSize="@dimen/idTitleTextSize"
+            android:layout_marginTop="@dimen/idTitleMTp"
+            android:layout_marginLeft="@dimen/idTitleMLt"
+            android:layout_marginRight="@dimen/idTitleMRt"/>
         <TextView
             android:id="@+id/nameTitle"
             android:layout_below="@+id/idTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Name: "
-            android:textSize="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            android:textSize="@dimen/nameTitleTextSize"
+            android:layout_marginLeft="@dimen/nameTitleMLt"
+            android:layout_marginRight="@dimen/nameTitleMRt"/>
     <View
         android:id="@+id/partitionLine"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="@dimen/partitionLineMTp"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="@dimen/partitionLineHeight"
         android:layout_below="@+id/nameTitle"
         android:text=""
         android:background="@color/colorPrimary"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="2dp"/>
+        android:layout_marginLeft="@dimen/partitionLineMLt"
+        android:layout_marginRight="@dimen/partitionLineMRt"
+        android:layout_marginBottom="@dimen/partitionLineMBtm"/>
 
 </RelativeLayout>
+</android.support.v7.widget.CardView>

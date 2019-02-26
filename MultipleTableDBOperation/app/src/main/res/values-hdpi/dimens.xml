@@ -1,2 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <!--Company XML-->
+    <dimen name="compEditTextMTp">164dp</dimen>
+    <dimen name="compSaveButtonMTp">64dp</dimen>
+
+    <!--Developer-->
+    <dimen name="technologyIdTextSize">12dp</dimen>
+    <dimen name="devEditTextMTp">36dp</dimen>
+    <dimen name="devEditTextAddMTp">20dp</dimen>
+    <dimen name="devEditTextMobMTp">20dp</dimen>
+    <dimen name="devSaveButtonMTp">20dp</dimen>
+
+    <!--Product-->
+    <dimen name="compForProdTextSize">12dp</dimen>
+    <dimen name="compForProdMBtm">64dp</dimen>
+    <dimen name="prodEditTextMTp">164dp</dimen>
+    <dimen name="prodSaveButtonMTp">64dp</dimen>
+
+    <!--Project-->
+    <dimen name="productIdTextSize">12dp</dimen>
+    <dimen name="productIdMBtm">64dp</dimen>
+    <dimen name="projEditTextMTp">164dp</dimen>
+    <dimen name="projSaveButtonMTp">64dp</dimen>
+
+    <!--Technology-->
+    <dimen name="projectIdTextSize">12dp</dimen>
+    <dimen name="projectIdMBtm">64dp</dimen>
+    <dimen name="techEditTextMTp">164dp</dimen>
+    <dimen name="techSaveButtonMTp">64dp</dimen>
+
+    <!--Developers Item-->
+    <dimen name="devTitleNameTextSize">12dp</dimen>
+    <dimen name="devTitleNameMTp">50dp</dimen>
+    <dimen name="devTitleNameMLt">10dp</dimen>
+    <dimen name="devTitleNameMRt">10dp</dimen>
+    <dimen name="devSubTitleTextSize">12dp</dimen>
+    <dimen name="devSubTitleMLt">10dp</dimen>
+    <dimen name="devSubTitleMRt">10dp</dimen>
+    <dimen name="devAddressTextSize">12dp</dimen>
+    <dimen name="devAddressMLt">10dp</dimen>
+    <dimen name="devAddressMRt">10dp</dimen>
+    <dimen name="devMobileTextSize">12dp</dimen>
+    <dimen name="devMobileMLt">10dp</dimen>
+    <dimen name="devMobileMRt">10dp</dimen>
+    <dimen name="devPartitionLineHeight">1dp</dimen>
+    <dimen name="devPartitionLineMTp">2dp</dimen>
+    <dimen name="devPartitionLineMLt">10dp</dimen>
+    <dimen name="devPartitionLineMRt">10dp</dimen>
+    <dimen name="devPartitionLineMBtm">2dp</dimen>
+
+    <!--Items To Show-->
+    <dimen name="idTitleTextSize">12dp</dimen>
+    <dimen name="idTitleMTp">5dp</dimen>
+    <dimen name="idTitleMLt">10dp</dimen>
+    <dimen name="idTitleMRt">10dp</dimen>
+    <dimen name="nameTitleTextSize">12dp</dimen>
+    <dimen name="nameTitleMRt">10dp</dimen>
+    <dimen name="nameTitleMLt">10dp</dimen>
+    <dimen name="partitionLineMTp">2dp</dimen>
+    <dimen name="partitionLineMLt">10dp</dimen>
+    <dimen name="partitionLineMRt">10dp</dimen>
+    <dimen name="partitionLineMBtm">2dp</dimen>
+    <dimen name="partitionLineHeight">1dp</dimen>
+
+    <!--Items To Show Developer-->
+    <dimen name="idTitleDevTextSize">12dp</dimen>
+    <dimen name="idTitleDevMTp">5dp</dimen>
+    <dimen name="idTitleDevMLt">10dp</dimen>
+    <dimen name="idTitleDevMRt">10dp</dimen>
+    <dimen name="nameTitleDevTextSize">12dp</dimen>
+    <dimen name="nameTitleDevMRt">10dp</dimen>
+    <dimen name="nameTitleDevMLt">10dp</dimen>
+    <dimen name="addTitleDevTextSize">12dp</dimen>
+    <dimen name="addTitleDevMLt">10dp</dimen>
+    <dimen name="addTitleDevMRt">10dp</dimen>
+    <dimen name="mobTitleDevTextSize">12dp</dimen>
+    <dimen name="mobTitleDevMLt">10dp</dimen>
+    <dimen name="mobTitleDevMRt">10dp</dimen>
+    <dimen name="partitionLineDevMTp">2dp</dimen>
+    <dimen name="partitionLineDevMLt">10dp</dimen>
+    <dimen name="partitionLineDevMRt">10dp</dimen>
+    <dimen name="partitionLineDevMBtm">2dp</dimen>
+    <dimen name="partitionLineDevHeight">1dp</dimen>
+
+    <!--Card View-->
+    <dimen name="cardViewMTp">5dp</dimen>
+    <dimen name="cardViewMLt">20dp</dimen>
+    <dimen name="cardViewMRt">20dp</dimen>
+    <dimen name="cardViewMBtm">5dp</dimen>
+
+    <!--Main Text View-->
+    <dimen name="textViewTextSize">20dp</dimen>
+    <dimen name="textViewMTp">2dp</dimen>
+    <dimen name="textViewMLt">20dp</dimen>
+    <dimen name="textViewMRt">20dp</dimen>
+    <dimen name="textViewMBtm">2dp</dimen>
+
+</resources>

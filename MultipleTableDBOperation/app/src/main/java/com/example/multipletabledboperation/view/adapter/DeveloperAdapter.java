@@ -37,10 +37,10 @@ public class DeveloperAdapter extends RecyclerView.Adapter<DeveloperAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         final Developer developer = developersList.get(position);
 
-        viewHolder.idTitle.setText("Developer ID: "+developer.getDevId());
-        viewHolder.nameTitle.setText("Developer Name: "+developer.getDevNAme());
-        viewHolder.addTitle.setText("Developer Address: "+developer.getDevAddress());
-        viewHolder.mobTitle.setText("Developer Mob. No: "+developer.getDevMobile());
+        viewHolder.idTitle.setText("ID: "+developer.getDevId());
+        viewHolder.nameTitle.setText("Name: "+developer.getDevNAme());
+        viewHolder.addTitle.setText("Address: "+developer.getDevAddress());
+        viewHolder.mobTitle.setText("Mob.No: "+developer.getDevMobile());
     }
 
     @Override
